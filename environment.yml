@@ -1,0 +1,24 @@
+name: poseact
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.4
+  - pip
+  - pip:
+      - numpy
+      - pandas
+      - scikit-learn
+      - xgboost
+      - matplotlib
+      - seaborn
+      - tqdm
+      - opencv-python
+      - mediapipe
+      - pyyaml
+      - joblib

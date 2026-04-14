@@ -1,0 +1,27 @@
+backend: minimal  # minimal|opentad
+seed: 42
+pseudo_root: outputs/pseudo_labels
+split_name: train
+train_annotation_csv: outputs/pseudo_labels/group/train_tal.csv
+val_annotation_csv: outputs/pseudo_labels/group/val_tal.csv
+test_annotation_csv: outputs/pseudo_labels/group/test_tal.csv
+output_dir: outputs/checkpoints/b_line
+metrics_out: outputs/metrics/b_line_metrics.json
+
+# minimal backend
+pose_root_ucf: data/pose
+pose_root_llsp: data/pose_llsp
+seq_len: 128
+batch_size: 8
+epochs: 8
+lr: 0.001
+weight_decay: 0.0001
+num_workers: 0
+
+# ddp (for future 4x5090)
+use_ddp: false
+world_size: 1
+
+# opentad backend command placeholders
+opentad_train_cmd: "python tools/train.py configs/my_actionformer_videomae.py"
+opentad_work_dir: outputs/checkpoints/b_line/opentad

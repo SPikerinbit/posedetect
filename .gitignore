@@ -1,0 +1,28 @@
+# Large data and artifacts
+/dataset/
+/data/
+/outputs/
+/reports/
+
+# Local env and caches
+/.conda/
+/.pip_cache/
+/.tmp/
+/.venv/
+/venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs and temp
+*.log
+*.tmp
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
