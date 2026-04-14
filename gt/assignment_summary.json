@@ -1,0 +1,31 @@
+{
+  "sample_ratio": 0.15,
+  "input_rows": 279,
+  "sampled_rows": 40,
+  "input_videos_by_split": {
+    "test": 117,
+    "train": 105,
+    "val": 12
+  },
+  "sampled_videos_by_split": {
+    "test": 18,
+    "train": 16,
+    "val": 2
+  },
+  "assignee_rows": {
+    "syq": 13,
+    "szh": 13,
+    "lrx": 14
+  },
+  "assignee_videos": {
+    "syq": 12,
+    "szh": 12,
+    "lrx": 12
+  },
+  "outputs": [
+    "gt/syq.csv",
+    "gt/szh.csv",
+    "gt/lrx.csv",
+    "gt/mapping_video_to_annotator.csv"
+  ]
+}

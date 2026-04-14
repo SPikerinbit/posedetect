@@ -1,0 +1,18 @@
+seed: 42
+use_gpu: true
+gpu_id: 0
+split_variant: penn
+split_root: data/penn_action/rebuild_dataset
+pose_root_ucf: data/penn_action/pose_roi_aligned
+pose_root_llsp: data/penn_action/pose_roi_aligned
+model_out: outputs/checkpoints/a_line/penn_a_line_roi_model.joblib
+metrics_out: outputs/metrics/penn_a_line_roi_metrics.json
+# key fix: shorter window for short jumping_jacks clips
+window_size: 24
+stride: 4
+background_quantile: 0.2
+median_kernel: 7
+min_segment_frames: 6
+max_gap_frames: 4
+peak_min_distance_sec: 0.3
+peak_prominence_ratio: 0.12

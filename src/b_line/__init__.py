@@ -1,3 +1,3 @@
-from .minimal_detector import MinimalTemporalLocalizer, TemporalDataset
+from .full_detector import FullTemporalLocalizer, TemporalLocalizationDataset
 
-__all__ = ["MinimalTemporalLocalizer", "TemporalDataset"]
+__all__ = ["FullTemporalLocalizer", "TemporalLocalizationDataset"]

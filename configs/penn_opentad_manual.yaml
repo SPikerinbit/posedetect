@@ -1,0 +1,16 @@
+backend: opentad_manual
+seed: 42
+
+# Manual-refined CSVs (15% subset workflow)
+manual_train_annotation_csv: data/penn_action/manual_refined/train_manual_refined.csv
+manual_val_annotation_csv: data/penn_action/manual_refined/val_manual_refined.csv
+manual_test_annotation_csv: data/penn_action/manual_refined/test_manual_refined.csv
+
+# Keep compatibility fields for metadata tracing
+train_annotation_csv: data/penn_action/manual_refined/train_manual_refined.csv
+val_annotation_csv: data/penn_action/manual_refined/val_manual_refined.csv
+test_annotation_csv: data/penn_action/manual_refined/test_manual_refined.csv
+
+metrics_out: outputs/metrics/penn_opentad_manual_metrics.json
+opentad_work_dir: outputs/checkpoints/b_line/penn/opentad_manual
+opentad_train_cmd: "python tools/train.py configs/penn_actionformer_videomae_manual.py"

@@ -1,0 +1,14 @@
+assignee,split,video_path,label_name,start_time,end_time,confidence,source_type,source_file,label_id
+szh,test,dataset/JumpingJack/1039.avi,jumping_jack,0.1333333333333333,0.9333333333333332,0.6878698468208313,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,2
+szh,test,dataset/PushUps/1348.avi,push_up,0.0,0.9333333333333332,0.8570376634597778,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,1
+szh,test,dataset/PushUps/1380.avi,push_up,0.0,1.4666666666666666,0.8615846633911133,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,1
+szh,test,dataset/PushUps/1405.avi,push_up,0.2666666666666666,1.2,0.5835890173912048,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,1
+szh,test,dataset/PushUps/1473.avi,push_up,0.0,1.4666666666666666,0.9696568846702576,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,1
+szh,test,dataset/PushUps/1503.avi,push_up,0.5333333333333333,3.2,0.697946310043335,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,1
+szh,test,dataset/PushUps/1551.avi,push_up,0.0,1.8666666666666667,0.6939719915390015,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,1
+szh,train,dataset/JumpingJack/1060.avi,jumping_jack,0.0,0.8,0.5879733562469482,pseudo,outputs/pseudo_labels_roi/penn/train_tal.csv,2
+szh,train,dataset/JumpingJack/1087.avi,jumping_jack,0.1333333333333333,0.9333333333333332,0.5787855386734009,pseudo,outputs/pseudo_labels_roi/penn/train_tal.csv,2
+szh,train,dataset/PushUps/1434.avi,push_up,0.0,1.0666666666666669,0.8028246164321899,pseudo,outputs/pseudo_labels_roi/penn/train_tal.csv,1
+szh,train,dataset/PushUps/1467.avi,push_up,0.9333333333333332,5.6,0.9117454290390016,pseudo,outputs/pseudo_labels_roi/penn/train_tal.csv,1
+szh,train,dataset/PushUps/1467.avi,push_up,3.2333333333333334,3.566666666666667,0.9117454290390016,pseudo_instance,outputs/pseudo_labels_roi/penn/train_tal.csv,1
+szh,train,dataset/PushUps/1528.avi,push_up,0.2666666666666666,1.7333333333333334,0.7784218192100525,pseudo,outputs/pseudo_labels_roi/penn/train_tal.csv,1

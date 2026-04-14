@@ -1,4 +1,6 @@
 seed: 42
+use_gpu: true
+gpu_id: 0
 split_variant: group  # random|group
 split_root: data/rebuild_dataset
 pose_root_ucf: data/pose

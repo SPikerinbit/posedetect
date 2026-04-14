@@ -1,0 +1,15 @@
+assignee,split,video_path,label_name,start_time,end_time,confidence,source_type,source_file,label_id
+lrx,test,dataset/JumpingJack/1079.avi,jumping_jack,0.0,1.0666666666666669,0.9045408368110656,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,2
+lrx,test,dataset/JumpingJack/1113.avi,jumping_jack,0.0,0.8,0.665278434753418,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,2
+lrx,test,dataset/PushUps/1364.avi,push_up,0.0,1.3333333333333333,0.8727470636367798,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,1
+lrx,test,dataset/PushUps/1417.avi,push_up,0.2666666666666666,1.4666666666666666,0.6591975688934326,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,1
+lrx,test,dataset/PushUps/1443.avi,push_up,0.0,0.9333333333333332,0.986989974975586,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,1
+lrx,test,dataset/PushUps/1504.avi,push_up,0.0,0.8,0.649461567401886,pseudo,outputs/pseudo_labels_roi/penn/test_tal.csv,1
+lrx,train,dataset/PushUps/1382.avi,push_up,0.1333333333333333,1.0666666666666669,0.743728518486023,pseudo,outputs/pseudo_labels_roi/penn/train_tal.csv,1
+lrx,train,dataset/PushUps/1386.avi,push_up,0.5333333333333333,1.4666666666666666,0.8159109950065613,pseudo,outputs/pseudo_labels_roi/penn/train_tal.csv,1
+lrx,train,dataset/PushUps/1386.avi,push_up,0.7,1.0333333333333334,0.8159109950065613,pseudo_instance,outputs/pseudo_labels_roi/penn/train_tal.csv,1
+lrx,train,dataset/PushUps/1536.avi,push_up,0.0,1.7333333333333334,0.8132817149162292,pseudo,outputs/pseudo_labels_roi/penn/train_tal.csv,1
+lrx,train,dataset/PushUps/1558.avi,push_up,0.0,2.0,0.8453173041343689,pseudo,outputs/pseudo_labels_roi/penn/train_tal.csv,1
+lrx,val,dataset/PushUps/1494.avi,push_up,0.0,1.2,0.950837016105652,pseudo,outputs/pseudo_labels_roi/penn/val_tal.csv,1
+lrx,val,dataset/PushUps/1510.avi,push_up,0.0,1.8666666666666667,0.8957733511924744,pseudo,outputs/pseudo_labels_roi/penn/val_tal.csv,1
+lrx,val,dataset/PushUps/1510.avi,push_up,3.2,4.666666666666667,0.893307089805603,pseudo,outputs/pseudo_labels_roi/penn/val_tal.csv,1

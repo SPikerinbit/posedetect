@@ -32,6 +32,8 @@ def main() -> None:
         peak_min_distance_sec=float(cfg.get("peak_min_distance_sec", 0.35)),
         peak_prominence_ratio=float(cfg.get("peak_prominence_ratio", 0.15)),
         seed=int(cfg.get("seed", 42)),
+        use_gpu=bool(cfg.get("use_gpu", False)),
+        gpu_id=int(cfg.get("gpu_id", 0)),
     )
 
     metrics = pipeline.fit(

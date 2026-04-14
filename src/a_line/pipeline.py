@@ -46,6 +46,8 @@ class ALinePipeline:
         peak_min_distance_sec: float = 0.35,
         peak_prominence_ratio: float = 0.15,
         seed: int = 42,
+        use_gpu: bool = False,
+        gpu_id: int = 0,
     ):
         self.window_size = window_size
         self.stride = stride
@@ -56,11 +58,18 @@ class ALinePipeline:
         self.peak_min_distance_sec = peak_min_distance_sec
         self.peak_prominence_ratio = peak_prominence_ratio
         self.seed = seed
+        self.use_gpu = use_gpu
+        self.gpu_id = gpu_id
         self.model: Any = None
         self.feature_names: list[str] = []
 
     def _make_model(self):
         if XGBClassifier is not None:
+            xgb_kwargs = {}
+            if self.use_gpu:
+                xgb_kwargs["device"] = f"cuda:{self.gpu_id}"
+                # xgboost>=2 uses histogram tree method with CUDA device.
+                xgb_kwargs["tree_method"] = "hist"
             return XGBClassifier(
                 n_estimators=300,
                 max_depth=6,
@@ -72,6 +81,7 @@ class ALinePipeline:
                 eval_metric="mlogloss",
                 random_state=self.seed,
                 n_jobs=4,
+                **xgb_kwargs,
             )
         return RandomForestClassifier(n_estimators=400, random_state=self.seed, n_jobs=4)
 
@@ -117,6 +127,9 @@ class ALinePipeline:
         self.model = self._make_model()
         self.model.fit(x_train, y_train)
         pred_val = self.model.predict(x_val) if x_val.shape[0] > 0 else np.array([], dtype=np.int64)
+        # Compatibility: some xgboost builds may return probability matrix from predict.
+        if isinstance(pred_val, np.ndarray) and pred_val.ndim == 2:
+            pred_val = np.argmax(pred_val, axis=1).astype(np.int64)
         metrics = {
             "train_samples": int(x_train.shape[0]),
             "val_samples": int(x_val.shape[0]),
@@ -305,6 +318,8 @@ class ALinePipeline:
             "peak_min_distance_sec": self.peak_min_distance_sec,
             "peak_prominence_ratio": self.peak_prominence_ratio,
             "seed": self.seed,
+            "use_gpu": self.use_gpu,
+            "gpu_id": self.gpu_id,
             "model": self.model,
             "feature_names": self.feature_names,
         }
@@ -323,6 +338,8 @@ class ALinePipeline:
             peak_min_distance_sec=payload["peak_min_distance_sec"],
             peak_prominence_ratio=payload["peak_prominence_ratio"],
             seed=payload["seed"],
+            use_gpu=bool(payload.get("use_gpu", False)),
+            gpu_id=int(payload.get("gpu_id", 0)),
         )
         obj.model = payload["model"]
         obj.feature_names = payload.get("feature_names", [])
