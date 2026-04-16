@@ -26,3 +26,11 @@ __pycache__/
 .idea/
 .DS_Store
 Thumbs.db
+
+# penn dataset
+penn/
+
+# uv files
+uv.lock
+pyproject.toml
+.python-version
