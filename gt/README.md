@@ -1,15 +1,8 @@
-# GT Annotations
+# GT Interfaces
 
-Place manually refined ground-truth annotation CSV files here for version control.
+This directory contains two annotation interfaces:
 
-Recommended files:
-- `train_manual_refined.csv`
-- `val_manual_refined.csv`
-- `test_manual_refined.csv`
+- `penn/` for the Penn Action manual refinement set
+- `ucf/` for the UCF preview/manual annotation set
 
-Expected core columns:
-- `video_path`
-- `start_time`
-- `end_time`
-- `label_name`
-- `source_type` (recommended: `manual_refined`)
+Each subdirectory has its own CSV templates, mapping file, and annotation notes.

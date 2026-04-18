@@ -1,0 +1,18 @@
+{
+  "video_count": 90,
+  "assignments": {
+    "lrx": 30,
+    "syq": 30,
+    "szh": 30
+  },
+  "class_counts": {
+    "push_up": 45,
+    "jumping_jack": 45
+  },
+  "outputs": [
+    "gt/ucf/lrx.csv",
+    "gt/ucf/syq.csv",
+    "gt/ucf/szh.csv",
+    "gt/ucf/mapping_video_to_annotator.csv"
+  ]
+}
